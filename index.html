@@ -109,13 +109,13 @@ body
 	z-index: 1;
 	text-align: center;
 }
-#carouselExampleIndicators .carousel-inner .carousel-item h1{
+#carouselExampleIndicators .carousel-inner .carousel-item h4{
 	height: auto;
 	color: #fff;
 	width: 100%;
 	z-index: 1;
 	text-align: center;
-	font-size: 5.5em;
+	font-size: 2.5em;
 	font-weight: 750;
 }
 #carouselExampleIndicators .carousel-inner .carousel-item p{
@@ -124,7 +124,7 @@ body
 	width: 100%;
 	z-index: 1;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 500;
 }
 .testimonials
@@ -208,10 +208,10 @@ body
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav text-white ">
             <li class="nav-item active ">
-                <a href="#" class="nav-link ">Mainpage</a>
+                <a href="#home" class="nav-link ">Mainpage</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Products</a>
+              <a class="nav-link" href="#products">Products</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Fat to Fit</a>
@@ -228,7 +228,7 @@ body
                 <a href="#" class="nav-link"><span class="fa fa-info-circle nav-icons"></span>About us</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="fa fa-user nav-icons"></span>Sign Up</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#signIn"><span class="fa fa-user nav-icons"></span>Sign Up</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" data-toggle="modal" data-target="#signUp" href="#"><span class="fa fa-user-circle nav-icons"></span>Sign In</a>
@@ -236,8 +236,9 @@ body
           </ul>
         </div>
       </nav>
+      <!--Modal signUp-->
       <div class="modal fade " id="signUp">
-        <div class="modal-dialog  modal-md modal-dialog-centered">
+        <div class="modal-dialog  modal-sm modal-dialog-centered">
           <div class="modal-content navbar-custom text-white border-white">
             <div class="modal-header">
               <h4>Sign In</h4>
@@ -261,7 +262,30 @@ body
         </div>
       </div>
 
-    
+      <!--Modal sign in-->
+      <div class="modal fade" id="signIn">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content text-white navbar-custom">
+            <div class="modal-header">
+              <h4>Sign In</h4>
+              <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="usr">Username:</label>
+                  <input type="text" class="form-control" placeholder="Enter username"/> 
+              </div>
+              <div class="form-group">
+                <label for="psw">Password:</label>
+                <input type="text" class="form-control" placeholder="password"/>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary">Giriş Yap</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -273,19 +297,19 @@ body
       <div class="carousel-inner">
         <div class="carousel-item active img-fluid">
           <div class="info">
-              <h1>SLIDE ONE</h1>
+              <h4>SLIDE ONE</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
             </div>
         </div>
         <div class="carousel-item img-fluid">
           <div class="info">
-              <h1>SLIDE TWO</h1>
+              <h4>SLIDE TWO</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
             </div>
         </div>
         <div class="carousel-item img-fluid">
           <div class="info">
-              <h1>SLIDE THREE</h1>
+              <h4>SLIDE THREE</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
             </div>
         </div>
@@ -300,7 +324,7 @@ body
       </a>
     </div>
   </div>
-
+  <section id="home">
     <div class="container text-center">
         <h1 class="pt-2">GYM YAZILARI</h1>
         <div class="row">
@@ -326,6 +350,8 @@ body
             </div>
         </div>
     </div>
+  </section>
+  <section id="products">
     <div class="container  text-center  my-3">
       <h1>BIG TITLE</h1>
       <div class="row text-white">
@@ -371,6 +397,7 @@ body
         </div>
       </div>
     </div>
+  </section>
     <section class="testimonials">
       <div class="container">
         <div class="row text-center font-weight-bold">
